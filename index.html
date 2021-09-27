@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Wahzomoni</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizPage - v5.1.0
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+
+
+<body>
+  <php 
+  if(isset($_POST['submit'])){
+    $to = "info@wazomoni.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $phoneno = $_POST['phoneno'];
+
+    $address = $_POST['address'];
+    $lga = $_POST['lga'];
+    $selectthenearestbranch = $_POST['selectthenearestbranch'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $firstname . " " . $lastname . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $firstname . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    
+  }
+?>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+          <h5 class="logo"><img src="assets/img/logo1.jpg" class="img-fluid" alt="">WAHZOMONI INTERNATIONAL LTD</h5>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+
+              <li><a class="nav-link scrollto" href="#team">Team</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Drop Down 1</a></li>
+                      <li><a href="#">Deep Drop Down 2</a></li>
+                      <li><a href="#">Deep Drop Down 3</a></li>
+                      <li><a href="#">Deep Drop Down 4</a></li>
+                      <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+                </ul>
+              </li> -->
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <li><a class="nav-link scrollto" href="#apply">apply</a></li>
+              <li><a class="nav-link scrollto" href="portfolio-details.html">BLOG</a></li>
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/15.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">WAHZOMONI</h2>
+                <h3 class="animate__animated animate__fadeInUp">CONVENIENT PERSONAL AND MICRO-BUSINESS LOAN</h3>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/16.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+               
+                  
+                <h2 class="animate__animated animate__fadeInDown">BOOST YOUR BUSINESS<br>WITH WAHZOMONI</h2>
+                  <h3 class="animate__animated animate__fadeInUp">No Stress, Competitive Interest Rate, Register and Receive Alert in 5 minuntes, No Colateral, No Guarantor.</h3>
+                <!-- <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/19.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                  <h2 class="animate__animated animate__fadeInDown">SCHOOL FEES LOANS<br> NO PROBLEM </h2>
+                   <h3 class="animate__animated animate__fadeInUp"> we are passionate about making financial inclusion count</h3>
+               
+
+               
+              <!--   <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+        <!--   <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/17.jpeg)">
+            <div class="carousel-container">
+              <div class="container">
+                <!-- <h2 class="animate__animated animate__fadeInDown">NO COLLATERAL<br> NO GUARANTOR<br> NO STRESS<br> </h2> -->
+                <!-- <p class="animate__animated animate__fadeInUp">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p> -->
+            <!--     <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div> --> -->
+
+         <!--  <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/18.jpg)">
+            <div class="carousel-container">
+              <div class="container"> -->
+               <!--  <h2 class="animate__animated animate__fadeInDown">We’re passionate about making financial inclusion count</h2>
+                <p class="animate__animated animate__fadeInUp">Our loans and savings(AJO) products are designed to offer you convenience and value</p> -->
+            <!--     <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
+           <!--    </div>
+            </div>
+          </div> -->
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section Section ======= -->
+    <section id="featured-services">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 box">
+            <i class="bi bi-briefcase"></i>
+            <h4 class="title"><a href="">WAZOLITE</a></h4>
+            <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> -->
+          </div>
+
+          <div class="col-lg-4 box box-bg">
+            <i class="bi bi-card-checklist"></i>
+            <h4 class="title"><a href="">WAZOSTOCK LIEN</a></h4>
+           
+          </div>
+
+          <div class="col-lg-4 box">
+            <i class="bi bi-binoculars"></i>
+            <h4 class="title"><a href="">WAZO MICRO</a></h4>
+           
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>WazoMoni a leading financial service provider established in Nigeria on 1st October 2019. It seeks to bridge the gap between the economically active small and medium scale entrepreneurs seeking to grow their business by providing soft credit facilities to meet their urgent business needs. Wazo is technologically(Fintech) driven with state of the art facilities, delivery speed is equally fast with a turn around time of less than 30min at maximum. Wazomoni corporate Headoffice is located at 22, Oladun street, Idimu powerline Bus-stop. Lagos with branches strategically located across major markets in Lagos states respectively with ongoing plans to establish her presence in entire Western Nigeria states in the first phase. We pride our robust human resources management system that aids us in recruiting the best hands, experienced, and equipped with relevant tools and skills that have 
+		      ensured our continuous growth in the financial sector.</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/w2.jpg" alt="" class="img-fluid">
+                <!-- <div class="icon"><i class="bi bi-bar-chart"></i></div> -->
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+                To be a financially alive, independent community Financial instutition that is committed to improving the quality of life of the enterprenuers and salary earners we serve. To earn the loyalty of employees, customers and the community by operating with integrity and fairness at all times.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/w1.jpg" alt="" class="img-fluid">
+                <!-- <div class="icon"><i class="bi bi-brightness-high"></i></div> -->
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+               To be a financially alive, independent community Financial instutition that is committed to improving the quality of life of the enterprenuers and salary earners we serve. To earn the loyalty of employees, customers and the community by operating with integrity and fairness at all times.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/w4.jpg" alt="" class="img-fluid">
+                <!-- <div class="icon"><i class="bi bi-calendar4-week"></i></div> -->
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+                 Wahzomoni Limited seeks to provide small Businesses, bankers, and basic salary earners with sustainable financial services to start a living and to create a future with encouraging expectations. Our business is to promote human dignity through the development of self reliant, participatory financial institutions.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header wow fadeInUp">
+          <h3>LOAN PACKAGES</h3>
+        </header>
+
+        <div class="row">
+
+          <!-- <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
+           
+            <h4 class="title"><a href="">5K 4WEEKS LOAN</a></h4>
+             <h4 class="title"><a href="">5000 - NGN</a></h4>
+            <ol class="description">
+              <li>12% - Interest</li>
+              <li>4 - Installment</li>
+              <li>1400 - NGN Par Installment</li>
+              <li>Weekly - Installment Type</li>
+              <li>100 - NGN - Fine Par Installment</li>
+            
+
+            </ol>
+          </div> -->
+       <!--    <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            
+            
+            <h4 class="title"><a href="">40K 12WEEKS LOAN</a></h4>
+             <h4 class="title"><a href="">4000 - NGN</a></h4>
+            <ol class="description">
+              <li>3% - Interest</li>
+              <li>12 - Installment</li>
+              <li>4534 - NGN Par Installment</li>
+              <li>Weekly - Installment Type</li>
+              <li> 200 - NGN - Fine Par Installment</li>
+            </ol>
+          </div> -->
+          <!-- <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+           
+            <h4 class="title"><a href="">10K 4WEEKS LOAN</a></h4>
+             <h4 class="title"><a href="">10000 - NGN</a></h4>
+            <ol class="description">
+              <li>3% - Interest</li>
+              <li>8 - Installment</li>
+              <li>1550 - NGN Par Installment</li>
+              <li>Weekly - Installment Type</li>
+              <li> 100 - NGN - Fine Par Installmentt</li>
+            </ol>
+          </div> -->
+          <!-- <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="title"><a href="">10K 8WEEKS LOAN</a></h4>
+             <h4 class="title"><a href="">10000 - NGN</a></h4>
+            <ol class="description">
+              <li>3% - Interest</li>
+              <li>4 - Installment</li>
+              <li>2800 - NGN Par Installment</li>
+              <li>Weekly - Installment Type</li>
+              <li> 100 - NGN - Fine Par Installmentt</li>
+            </ol>
+          </div> -->
+          <!-- <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+            
+            <h4 class="title"><a href=""> DAILY LOAN 10K 4WEEKS </a></h4>
+             <h4 class="title"><a href="">10000 - NGN</a></h4>
+            <ol class="description">
+              <li> 3% - Interest </li>
+              <li> 20 - Installment </li>
+              <li> 560 - NGN Par Installment </li>
+              <li> Daily repayement - Installment Type </li>
+              <li> 50 - NGN - Fine Par Installment </li>
+            </ol>
+          </div> -->
+         <!--  <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">5K 4WEEKS DAILY LOAN NEW</a></h4>
+             <h4 class="title"><a href="">5000 - NGN</a></h4>
+            <ol class="description">
+              <li> 50% - Interest </li>
+              <li> 20 - Installment </li>
+              <li> 280 - NGN Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> 50 - NGN - Fine Par Installment </li>
+            </ol>
+
+        </div>
+ -->
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">WAZO STOCK LIEN 50K/8WEEKS</a></h4>
+             <h4 class="title"><a href="">50000 - NGN</a></h4>
+            <ol class="description">
+              <li> 3% - Interest </li>
+              <li> 8 - Installment </li>
+              <li> 10 - Installment </li>
+              <li> Weekly - Installment Type </li>
+              <li> 300 - NGN - Fine Par Installment </li>
+            </ol>
+
+        </div>
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">WAZO 20K/10</a></h4>
+             <h4 class="title"><a href="">20000 - NGN</a></h4>
+            <ol class="description">
+              <li> 30% - Interest </li>
+              <li> 10 - Installment </li>
+              <li> 2600 - NGN Par Installment </li>
+              <li> Weekly - Installment Type </li>
+              <li> 100 - NGN - Fine Par Installment </li>
+            </ol>
+
+        </div>
+
+        <header class="section-header wow fadeInUp">
+          <h3>DEPOSIT PACKAGES</h3>
+        </header>
+
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">DAILY AJO</a></h4>
+             <h4 class="title"><a href="">₦ 30,000 </a></h4>
+            <ol class="description">
+              <li> ₦ 3,000 - Management Fee </li>
+              <li> 5 - Installment </li>
+              <li> ₦ 6,000 Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> ₦ 3,500 - Default Feee </li>
+            </ol>
+
+        </div>
+
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">DAILY COLLECTION</a></h4>
+             <h4 class="title"><a href="">₦ 15,000</a></h4>
+            <ol class="description">
+              <li> ₦ 250 - Management Fee </li>
+              <li> 30 - Installment </li>
+              <li> ₦ 500 Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> ₦ 250 - Default Fee </li>
+            </ol>
+
+        </div>
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">AJO PLUS</a></h4>
+             <h4 class="title"><a href="">₦ 30,000 </a></h4>
+            <ol class="description">
+              <li> ₦ 1,000 - Management Fee </li>
+              <li> 6 - Installment </li>
+              <li> ₦ 5000 Par Installment </li>
+              <li> Weekly - Installment Type </li>
+              <li> ₦ 500 - Default Fee </li>
+            </ol>
+
+        </div>
+         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">WEEKLY AJO</a></h4>
+             <h4 class="title"><a href="">₦ 20,000</a></h4>
+            <ol class="description">
+              <li> ₦ 500 - Management Fee </li>
+              <li> 4 - Installment </li>
+              <li> ₦ 5000 Par Installment </li>
+              <li> Weekly - Installment Type </li>
+              <li> ₦ 5,000 - Default Fee </li>
+            </ol>
+
+        </div>
+
+           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">DAILY AJO 300/30 DAYS</a></h4>
+             <h4 class="title"><a href="">₦ 9,000</a></h4>
+            <ol class="description">
+              <li> ₦ 300 - Management Fee </li>
+              <li> 30 - Installment </li>
+              <li> ₦ 300 Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> ₦ 0 - Default Fe </li>
+            </ol>
+
+        </div>
+
+           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">DAILY AJO 500/30 DAYS</a></h4>
+             <h4 class="title"><a href="">₦ 15,000</a></h4>
+            <ol class="description">
+              <li> ₦ 500 - Management Fee </li>
+              <li> 30 - Installment </li>
+              <li> ₦ 500 Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> ₦ 0 - Default Fe </li>
+            </ol>
+
+        </div>
+
+           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+          <h4 class="title"><a href="">DAILY AJO 1000/30 DAYS</a></h4>
+             <h4 class="title"><a href="">₦ 30,000</a></h4>
+            <ol class="description">
+              <li> ₦ 1000 - Management Fee </li>
+              <li> 30 - Installment </li>
+              <li> ₦ 1000 Par Installment </li>
+              <li> Day - Installment Type </li>
+              <li> ₦ 0 - Default Fee </li>
+            </ol>
+
+        </div>
+
+           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
+           
+            <h4 class="title"><a href="">DAILY AJO 200/30 DAYS</a></h4>
+             <h4 class="title"><a href="">₦ 6.000</a></h4>
+            <ol class="description">
+              <li> ₦ 200 - Management Fee </li>
+              <li> 30 - Installment </li>
+              <li> ₦ 200 Par Installment </li>
+              <li> Day - Installment Type</li>
+              <li> ₦ 0 - Default FeE </li>
+            </ol>
+
+        </div>
+
+
+
+
+
+      </div>
+    </section><!-- End Services Section -->
+
+   
+    <section id="skills">
+      <div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+			<h3>what we do</h3>
+			<p>Wazomoni a leading financial solution provider and one-stop-shop for growing small and medium scale entrepreneurs, market women and business owners. Whether it’s money to pay rent, cover school fees or buy a new car, Wazomoni can help. We offer loans of up to N4,000,000, conveniently spread over 12 months, and our flexible repayment pattern is specially designed to meet your needs. Wahzomoni also provides Deposits or Savings (Ajo) services. Also wazomoni renders three basic loan services:</p> <h3>WAZOLITE, WAZOSTOCK LIEN, WAZO MICRO</h3> 
+			</header>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Facts</h3>
+          <p>BASIC FACTS ABOUT WAHZOMONI</p>
+        </header>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1001" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Customers</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Branches</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Employers</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Facts Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+               <!--  <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt=""> -->
+                <h3>CHIZOBA EMEKA</h3>
+                
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 can you guys loan more money?
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <!-- <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt=""> -->
+                <h3>OGBONNA MARY</h3>
+                
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  you people are real.... the money helped me alot
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+               <!--  <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt=""> -->
+                <h3>TANKO WABA</h3>
+             
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  i will definitely introduce my friends to your company
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <!-- <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt=""> -->
+                <h3> HASAN RAHMAN</h3>
+                
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  wow!! you people have just saved my business for me, thank you
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+               <!--  <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt=""> -->
+                <h3> BALOGUN TUNDE</h3>
+                
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 thank you, i was able to use the money to buy more goods for my store
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+             <div class="swiper-slide">
+              <div class="testimonial-item">
+                <!-- <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt=""> -->
+                <h3>  OGUNDELE OLANREWAJU </h3>
+                
+                <p>
+                  <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  the loan really helped me
+                  <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+   <!-- ======= Team Section ======= -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>Meet Our Management Team</h3>
+        <!--   <p>Our team has a combined experience of 30+ years in IT, Business Finance and empowered to provide world-class real estate enhancement support. Relying on the strongest team of certified engineers and software administrators, we are right there for you, ready to help with the most specialized technical, financial and real estate-related issues. </p>
+        </div>
+ -->
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <!-- <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content"> -->
+                  <h4>OLAWALE OLASOJU</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <!-- <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content"> -->
+                  <h4>HENRY  DUROJAYE</h4>
+                  <span>DIRECTOR</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+               <!--  </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <!-- <img src="assets/img/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content"> -->
+                  <h4>KAZEEM TEWOGBADE</h4>
+                  <span>ASSOCIATE PATNER</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+               <!--  </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <!-- <img src="assets/img/team-4.jpg" class="img-fluid" alt="">
+              <div class="member-info"> -->
+                <!-- <div class="member-info-content"> -->
+                  <h4>OLADELE OGUNLEYE</h4>
+                  <span>SENIOR BUSINESS MANAGER</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href="https://web.facebook.com/Wazo-moni-100550475342906"><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                <!-- </div> -->
+              <!-- </div> -->
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>Contact</h3>
+          <p> Kindly contact us for further information through following means below</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>22, Oladun Street,<br>Idimu, Lagos.</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">09090191515</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@wazomoni.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+       <!--  <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div> -->
+
+      </div>
+    </section><!- End Contact Section 
+
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="apply" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>APPLY</h3>
+          
+        </div>
+
+       
+
+        <div class="form">
+         
+          <form action="" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="firstname" class="form-control" id="name" placeholder="Input Your first name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="lastname" id="email" placeholder=" Input Your last name" required>
+              </div>
+            </div>
+           <div class="row">
+              <div class="form-group col-md-6">
+                <input type="digit" name="phoneno" class="form-control" id="name" maxlength="11" placeholder="InpYour phone no" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input class="form-control" name="email" id="email" placeholder="Input Your Email" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="address" class="form-control" id="name"  placeholder="Input Your address" required>
+              </div>
+              <div class="form-group col-md-6">
+                <select class="form-control" name="lga" id="email" placeholder="Input Your Lga" required>
+                  <option>LGA</option>
+                  <option>ALIMOSHO</option>
+                  <option>IYANA IBA</option>
+                  <option>IKEJA</option>
+                  <option>AGEGE</option>
+                  <option>SURULERE</option>
+                  <option>APAPA</option>
+                  <option>ISLAND</option>
+                </select>
+              
+            </div>
+            <div class="form-group col-md-6">
+                <select class="form-control" name="selectthenearestbranch" id="email" placeholder="Input Your nearest branch" required>
+                  <option>select the nearest branch</option>
+                  <option>Ikotun</option>
+                  <option>Igando</option>
+                  <option>Idimu</option>
+                  </select>
+              
+            </div>
+            <div class="text-center"><button type="submit">Submit</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+     
+    
+
+     
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>WAZOMONI</h3>
+            <p>Wazomoni a leading financial solution provider and one-stop-shop for growing small and medium scale entrepreneurs, market women and business owners.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <!-- <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+                OUR HEAD OFFICE.<br>
+                22, Oladun Street,<br>
+                Idimu,<br>
+                Lagos Nigeria <br>
+              <strong>Phone:</strong> 09090191515 <br>
+              <strong>Email:</strong> info@wazomoni.com <br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://web.facebook.com/Wazo-moni-100550475342906" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/wahzomoni/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>We are now doing deposite of different of different packages</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Wazomoni(Growing together)</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+      -->
+        Designed by <a href="https://wazomoni.com/">Wazomoni.com</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
